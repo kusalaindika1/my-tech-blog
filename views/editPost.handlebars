@@ -1,0 +1,31 @@
+<section class="editPost__container">
+  <h2>Edit Post</h2>
+  <form id="editPost__submit">
+    <div>
+      <p>Title</p>
+      <input
+        id="editPost__title"
+        type="text"
+        value="{{post.title}}"
+        placeholder="Edit Your Post Title"
+      />
+    </div>
+
+    <div>
+      <p>Content</p>
+      <textarea
+        id="editPost__content"
+        rows="6"
+        placeholder="Edit Your Post Content"
+      >{{post.content}}</textarea>
+    </div>
+
+    <div class="editPost__buttons">
+      <button type="submit">Update Post</button>
+      <button id="editPost__deletePostButton" type="button">Delete Post</button>
+    </div>
+  </form>
+</section>
+
+<script src="/js/editPost.js"></script>
+<script src="/js/deletePost.js"></script>

@@ -1,0 +1,16 @@
+<section class="dashboard__container">
+<h2>Your Posts</h2>
+
+<div class="dashboard__addPostButton">
+  <a href="/dashboard/add">New Post</a>
+</div>
+{{#if posts.length}}
+
+  
+    {{#each posts as |post|}}
+      {{> dashboardPosts post}}
+    {{/each}}
+
+
+{{/if}}
+</section>

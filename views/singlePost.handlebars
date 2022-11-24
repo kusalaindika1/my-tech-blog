@@ -1,0 +1,16 @@
+<section class="singlePost__container">
+{{> postContent post}}
+
+{{#if loggedIn}}
+    <form id="comment__submit">
+    <div class="comment__submit_container">
+        <input id="comment__body" placeholder="Type Your Comment" />
+        <button type="submit" class="btn">Comment</button>
+    </div>
+    </form>
+<script src="/js/comment.js"></script>
+{{/if}}
+
+{{> comments post.comments}}
+
+</section>

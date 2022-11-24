@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tech Blog</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="/">Tech <span>Blog</span></a></h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          {{#if loggedIn}}
+            <li><p id="logout__button">Logout</p></li>
+          {{else}}
+            <li><a href="/login">Login</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+
+    </header>
+
+    <main>
+      {{{body}}}
+    </main>
+
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
+
+</html>

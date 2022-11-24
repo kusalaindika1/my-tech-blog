@@ -1,0 +1,492 @@
+:root {
+  --main-color: rgb(255, 157, 0);
+  --main-color-dark: rgb(225, 139, 0);
+}
+
+* {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #181818;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 252, 244);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+header h1 a {
+  color: black;
+  font-size: 20px;
+}
+
+header h1 a span {
+  color: var(--main-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a,
+nav ul li p {
+  color: var(--main-color-dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 450ms ease-in;
+}
+
+nav ul li a:hover,
+nav ul li p:hover {
+  color: red;
+}
+
+main {
+  width: 100%;
+}
+
+.post__container {
+  width: 100%;
+  padding: 27px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post__unit {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.post__unit h4 {
+  margin-top: 7px;
+  padding: 7px;
+  margin-bottom: 12px;
+}
+
+.post__unit h4 a {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.post__unit p {
+  padding: 7px;
+  text-align: justify;
+}
+
+.post__unit .post__footer {
+  margin-top: 7px;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.post__unit .post__footer span {
+  color: red;
+}
+
+.singlePost__container {
+  width: 100%;
+  padding: 27px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.singlePost__container h4 {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid gray;
+}
+
+.singlePost__container h4 a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #eee;
+}
+
+.singlePost__container p {
+  color: #eee;
+  text-align: justify;
+}
+
+.singlePost__container .post__footer {
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 7px;
+  font-weight: 700px;
+  border-bottom: 2px solid gray;
+}
+
+.singlePost__container .post__footer span {
+  color: var(--main-color);
+}
+
+.singlePost__container .comment__container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.singlePost__container .comment__unit {
+  margin-top: 15px;
+  padding: 7px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.singlePost__container .comment__unit p {
+  color: black;
+}
+
+.singlePost__container .comment__container .comment__auth {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.singlePost__container .comment__unit .comment__content {
+  width: 100%;
+  margin-left: 50px;
+  text-align: justify;
+  font-size: 14px;
+}
+
+#comment__submit {
+  width: 100%;
+  padding: 20px 20px 0 10px;
+  margin-top: 10px;
+}
+
+.comment__submit_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.comment__submit_container input {
+  width: 95%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.comment__submit_container button {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: var(--main-color);
+  transition: all 450ms ease-in;
+  cursor: pointer;
+}
+
+.comment__submit_container button:hover {
+  background-color: red;
+  color: #eee;
+}
+
+.dashboard__container {
+  width: 100%;
+  margin-top: 100px;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  color: #eee;
+}
+
+.dashboard__container h2 {
+  width: 100%;
+  font-size: 30px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid gray;
+}
+
+.dashboard__container .dashboard__addPostButton {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.dashboard__container .dashboard__addPostButton a {
+  padding: 12px 20px;
+  color: black;
+  background-color: var(--main-color);
+  border-radius: 7px;
+  transition: all 450ms ease-in;
+}
+
+.dashboard__container .dashboard__addPostButton a:hover {
+  background-color: red;
+  color: #eee;
+}
+
+.dashboard__container .dashboard__post {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 7px;
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+
+.dashboard__container .dashboard__post p {
+  padding: 12px;
+  color: black;
+}
+
+.dashboard__container .dashboard__post h4 {
+  width: 100%;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-bottom: 2px solid white;
+}
+
+.dashboard__container .dashboard__post h4 a {
+  color: black;
+}
+
+.dashboard__container .dashboard__post .post__auth {
+  margin-top: 20px;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dashboard__container .dashboard__post .post__auth span {
+  color: red;
+}
+
+.login__container,
+.signup__container {
+  width: 100%;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__container .login__block,
+.signup__container .signup__block {
+  width: 550px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.login__container .login__block h2,
+.signup__container .signup__block h2 {
+  width: 100%;
+  padding-bottom: 7px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.login__container .login__block form div,
+.signup__container .signup__block form div {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+}
+
+.login__container .login__block form div input,
+.signup__container .signup__block form div input {
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: inherit;
+}
+
+.login__container .login__block form div p,
+.signup__container .signup__block form div p {
+  padding: 0 7px;
+  position: absolute;
+  left: 12px;
+  top: -12px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  color: var(--main-color);
+}
+
+.login__container .login__block form .login__buttons,
+.signup__container .signup__block form .signup__buttons {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login__container .login__block form .login__buttons button,
+.login__container .login__block form .login__buttons a,
+.signup__container .signup__block form .signup__buttons button,
+.signup__container .signup__block form .signup__buttons a {
+  padding: 7px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--main-color);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 450ms ease-in;
+}
+
+.login__container .login__block form .login__buttons button:hover,
+.login__container .login__block form .login__buttons a:hover,
+.signup__container .signup__block form .signup__buttons button:hover,
+.signup__container .signup__block form .signup__buttons a:hover {
+  background-color: red;
+  color: white;
+}
+
+.addPost__container {
+  width: 100%;
+  margin-top: 150px;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eee;
+}
+
+.addPost__container h2,
+.editPost__container h2 {
+  width: 100%;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid gray;
+}
+
+.addPost__container form,
+.editPost__container form {
+  width: 100%;
+}
+
+.addPost__container form div,
+.editPost__container form div {
+  position: relative;
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: 2px solid var(--main-color);
+}
+
+.addPost__container form div input,
+.addPost__container form div textarea,
+.editPost__container form div input,
+.editPost__container form div textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: inherit;
+}
+
+.addPost__container form div p,
+.editPost__container form div p {
+  position: absolute;
+  left: 12px;
+  top: -12px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 7px;
+  background-color: #181818;
+  color: var(--main-color);
+}
+
+.addPost__container form button {
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  background-color: var(--main-color);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 450ms ease-in;
+}
+
+.addPost__container form button:hover {
+  background-color: red;
+  color: #eee;
+}
+
+.editPost__container {
+  width: 100%;
+  margin-top: 150px;
+  padding: 27px;
+  color: #eee;
+}
+
+.editPost__container form .editPost__buttons {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editPost__container form .editPost__buttons button {
+  padding: 7px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  background-color: var(--main-color);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 450ms ease-in;
+}
+
+.editPost__container form .editPost__buttons button:hover {
+  background-color: red;
+  color: #eee;
+}
+
+@media only screen and (max-width: 600px) {
+  .login__container .login__block,
+  .signup__container .signup__block {
+    width: 95%;
+  }
+}
